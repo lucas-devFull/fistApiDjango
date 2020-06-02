@@ -1,10 +1,10 @@
 $(document).ready(function(){
     $.ajax({
         type: "GET",
-        url: "http://localhost:8000/listaClientes/?format=api",
+        url: "http://localhost:8000/listaClientes/?format=json",
         // data: data,
         // success: success,
-        dataType: 'application/json'
+        dataType: 'application/json',
       }).done(function(data){
           console.log(data);
           
