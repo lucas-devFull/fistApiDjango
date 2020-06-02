@@ -1,4 +1,6 @@
+fazer ao dar o clone no projeto
 
+sudo apt-get install python3
 sudo apt-get install python3-venv
 sudo apt-get install python3-pip 
 pip3 install django
@@ -6,7 +8,7 @@ pip3 install djangorestframework
 pip3 install django-cors-headers
 
 
-
+já feito 
 INSTALLED_APPS = (
     ...
     'corsheaders',
