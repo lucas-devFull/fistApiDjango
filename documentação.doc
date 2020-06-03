@@ -1,11 +1,29 @@
-fazer ao dar o clone no projeto
-
-sudo apt-get install python3
+criando api
+criar pasta 
 sudo apt-get install python3-venv
-sudo apt-get install python3-pip 
-pip3 install django
+criar venv
+pip3 install django  se nao estiver instalado use sudo apt-get install python3-pip
+entar na venv 
 pip3 install djangorestframework
+pip3 install markdown
+pip3 install django-filter
 pip3 install django-cors-headers
+django-admin startproject api
+cd api
+python3 manage.py startapp core
+colocar o core no INSTALLED_APPS
+python3 manage.py migrate
+python3 manage.py createsuperuser (admin, sem email, lucas123)
+python3 manage.py runserver se aparece CONTROL-C é que funfou
+ver o resto no video 
+criar pasta do projeto
+cd pasta do projeto
+sudo apt-get install python3
+python3 
+import django
+se nao der erro deu certo
+exit()
+. venv/bin/activate
 
 
 já feito 
