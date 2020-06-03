@@ -1,13 +1,17 @@
 from rest_framework import serializers
-from .models import Cliente
-from .models import Endereco
-# 
+from .models import Cliente, Endereco, Telefone
 class EnderecoSerializer(serializers.ModelSerializer):
     class Meta: 
         model = Endereco
-        fields = ['id', 'rua', 'cidade']
+        fields = ['rua', 'cidade']
+
+class TelefoneControlller(serializers.ModelSerializer):
+    class Meta:
+        model = Telefone
+        fields = ['telefone']
 class ClienteSerializer(serializers.ModelSerializer):
-    endereco = EnderecoSerializer(many=True, read_only=True)
+    endereco = EnderecoSerializer()
+    numeroCelular = TelefoneControlller()
     class Meta:
         model = Cliente
-        fields = ['id', 'nome','endereco','idade']
+        fields = ['id', 'nome','endereco','idade', 'numeroCelular']

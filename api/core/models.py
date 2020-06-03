@@ -6,10 +6,15 @@ class Endereco(models.Model):
 
     def __str__(self):
         return self.rua
+
+class Telefone(models.Model):
+    telefone = models.IntegerField(unique=True, null=False, default=0)
+    def __str__(self):
+        return str(self.telefone)
 class Cliente(models.Model):
     nome = models.CharField(max_length=100)
-    endereco = models.ForeignKey(Endereco, related_name='endereco',  on_delete=models.CASCADE)
-    # endereco = models.CharField(max_length=50)
+    endereco = models.ForeignKey(to="Endereco",on_delete=models.CASCADE)
+    numeroCelular = models.ForeignKey(to="Telefone", on_delete=models.CASCADE)
     idade = models.IntegerField()
 
     def __str__(self):
