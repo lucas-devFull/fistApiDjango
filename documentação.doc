@@ -16,6 +16,10 @@ python3 manage.py migrate
 python3 manage.py createsuperuser (admin, sem email, lucas123)
 python3 manage.py runserver se aparece CONTROL-C é que funfou
 ver o resto no video 
+
+    reestarta o banco makemigrations
+
+
 criar pasta do projeto
 cd pasta do projeto
 sudo apt-get install python3
