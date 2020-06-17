@@ -20,3 +20,14 @@ class Cliente(models.Model):
     def __str__(self):
         return self.nome
 
+class Teste(models.Model):
+    retorno = str()
+    search = ""
+
+    def __init__(self, nome):
+        self.retorno = str()
+        self.search = nome
+        return None
+
+    def teste(self):
+        return self.search

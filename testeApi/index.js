@@ -1,8 +1,8 @@
 $(document).ready(function(){
     $.ajax({
-        type: "GET",
-        url: "http://localhost:8000/listaClientes/?format=json",
-        // data: data,
+        type: "POST",
+        url: "http://localhost:8000/test/",
+        data: {"oi":"sou foda"},
         // success: success,
         dataType: 'application/json',
       }).done(function(data){

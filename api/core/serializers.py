@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Cliente, Endereco, Telefone
+from .models import Cliente, Endereco, Telefone, Teste
 class EnderecoSerializer(serializers.ModelSerializer):
     class Meta: 
         model = Endereco
@@ -15,3 +15,8 @@ class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cliente
         fields = ['id', 'nome','endereco','idade', 'numeroCelular']
+
+class TesteSerializer(serializers.ModelSerializer):
+    sla = Teste.teste
+    class Meta:
+        model = Teste
