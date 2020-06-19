@@ -1,7 +1,7 @@
-from .models import Teste
+from .models import Teste, Usuario
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
-from .serializers import TesteSerializer
+from .serializers import TesteSerializer, UsuarioSerializer
 import json
 from django.http import JsonResponse
 
@@ -26,3 +26,7 @@ class Testaparametro(ModelViewSet):
                 nome = sla.teste()
                 return JsonResponse({'dados':nome})
                 # return Response({"manDeuCerto" :sla.teste})
+
+class testePost(ModelViewSet):
+        queryset = Usuario.objects.filter()
+        serializer_class = UsuarioSerializer
